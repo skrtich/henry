@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Brandon Skrtich - Resumé</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Jura:400,500,600' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                margin: 0;
+                background-color: #DDD;
+            }
+
+            div {
+                /*position: absolute;*/
+                box-sizing: border-box;
+            }
+
+            #page {
+                font-family: 'Jura', sans-serif;
+                /*font-family: 'Khand', sans-serif;*/
+                /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
+
+                font-weight: 400;
+            }
+
+            @media screen {
+                #page {
+                    width: 750px;
+
+                    margin: 15px auto 15px auto;
+                    padding: 25px;
+                    background-color: #FFF;
+                }
+            }
+
+            @media print {
+                #page {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                h2, h3 {
+                    page-break-after: avoid;
+                }
+
+                img {
+                    max-width: 100% !important;
+                }
+
+                ul, img {
+                    page-break-inside: avoid;
+                }
+            }
+
+            #section1 {
+                height: 250px;
+            }
+
+            #section1a {
+                padding: 25px;
+                width: 50%;
+                float: left;
+            }
+
+            #section1b {
+                padding: 25px;
+                font-size: 30px;
+                width: 50%;
+                float: right;
+                text-align: right;
+            }
+
+            #developer_name {
+                font-size: 70px;
+                font-weight: bold;
+            }
+
+            #developer_title {
+                font-size: 35px;
+            }
+
+            .left {
+                width: 50%;
+                float: left;
+                text-align: left;
+            }
+
+            .right {
+                width: 50%;
+                float: right;
+                text-align: right;
+            }
+
+            .clear {
+                clear: both;
+            }
+
+            .section {
+                clear: both;
+                min-height: 100px;
+                width: 100%;
+                display: inline-block;
+            }
+
+            .section_title {
+                width: 210px;
+                float: left;
+                font-size: 35px;
+                font-weight: bold;
+                padding: 5px;
+                text-align: center;
+                border-bottom: 2px solid black;
+                border-right: 2px solid black;
+            }
+
+            .section_description {
+                float: right;
+                padding: 10px;
+                width: calc(100% - 210px);
+                border-top: 2px solid black;
+            }
+
+            .job {
+                width: 100%;
+                min-height: 100px;
+                display: inline-block;
+                padding-bottom: 10px;
+            }
+
+            .description_info {
+                width: 50%;
+                float: left;
+                text-align: right;
+            }
+
+            .description_text {
+
+            }
+
+            .description_date {
+                width: 50%;
+                float: right;
+                text-align: right;
+            }
+
+            .job_company {
+                font-size: 20px;
+                font-weight: bold;
+                padding-bottom: 4px;
+            }
+
+            .job_title {
+                font-weight: bold;
+                padding-bottom: 4px;
+            }
+
+            .school {
+                text-align: center;
+                display: inline-block;
+                width: 100%;
+            }
+
+            .title {
+                white-space: nowrap;
+                font-size: 18px;
+                font-weight: bold;
+                padding-bottom: 4px;
+            }
+
+            .desc {
+                white-space: nowrap;
+                font-size: 16px;
+                padding-bottom: 4px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <div id="section1" class="section">
+                <div id="section1a">
+                    <div id="developer_name">BRANDON<br>SKRTICH</div>
+                    <div id="developer_title">WEB DEVELOPER</div>
+                </div>
+                <div id="section1b">
+                    720.362.0484<br><br>
+                    bskrtich@gmail.com<br><br>
+                    11530 Benton Ct<br>
+                    Broomfield, Co 80020
+                </div>
+            </div>
+            <div id="section2" class="section">
+                <div class="section_title">Experience</div>
+                <div class="section_description">
+                    <div class="job">
+                        <div class="left">
+                            <div class="job_company">Return Path</div>
+                            <div class="job_title">Software Engineer</div>
+                        </div>
+                        <div class="right">
+                            <div class="title">Sept, 2013 - Current</div>
+                            <div class="desc">Broomfield, CO</div>
+                        </div>
+                        <div class="clear">
+                            Developed and maintained frontend systems using Backbone.Js and Angular.Js for the front end and PHP, Oracle, and CentOS on the back.
+    Worked in a large team developing, enhancing and maintaining core products that were used by Fortune 500 companies.
+    Used the Agile/Kanban/Scrum process throughout the development process in order to keep production high and allow for quick turn around.
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="left">
+                            <div class="job_company">BieMedia</div>
+                            <div class="job_title">Team Lead, Development</div>
+                        </div>
+                        <div class="right">
+                            <div class="title">Jun, 2012 - Aug, 2013</div>
+                            <div class="desc">Denver, CO</div>
+                        </div>
+                        <div class="clear">
+                            Blah Blah Blah
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="left">
+                            <div class="job_company">Retriever Software</div>
+                            <div class="job_title">Developer/Help Desk Technician</div>
+                        </div>
+                        <div class="right">
+                            <div class="title">May, 2007 - Jun, 2012</div>
+                            <div class="desc">Englewood, CO</div>
+                        </div>
+                        <div class="clear">
+                            Blah Blah Blah
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section3" class="section">
+                <div class="section_title">Skills</div>
+                <div class="section_description">
+                    JavaScript Backbone.js angular.js PHP Silex Cakephp Yii Zend WordPress
+                    MySQL MVC LESS CSS HTML/CSS Apache Oracle MySQL PostgreSQL SQL
+                    jQuery Git OOP RegEx AJAX REST API Linux Agile Scrum Kanban
+                </div>
+            </div>
+            <div id="section4" class="section">
+                <div class="section_title">Education</div>
+                <div class="section_description">
+                    <div class="school">
+                        <div class="left">
+                            <div class="title">Western Governors University</div>
+                            <div class="desc">B.S. Software Development</div>
+                        </div>
+                        <div class="right">
+                            <div class="title">December 2016</div>
+                            <div class="desc">Salt Lake City, UT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
