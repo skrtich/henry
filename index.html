@@ -4,9 +4,12 @@
         <meta charset="UTF-8">
         <title>Brandon Skrtich - Resumé</title>
 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Jura:400,500,600' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Jura:400,500,600" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/png" href="/bs-icon.png">
+
         <style>
             body {
                 margin: 0;
@@ -18,7 +21,7 @@
                 box-sizing: border-box;
             }
 
-            #page {
+            main {
                 font-family: 'Jura', sans-serif;
                 /*font-family: 'Khand', sans-serif;*/
                 /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
@@ -27,7 +30,7 @@
             }
 
             @media screen {
-                #page {
+                main {
                     width: 750px;
 
                     margin: 15px auto 15px auto;
@@ -37,7 +40,7 @@
             }
 
             @media print {
-                #page {
+                main {
                     width: 100%;
                     margin: 0;
                     padding: 0;
@@ -99,7 +102,7 @@
                 clear: both;
             }
 
-            .section {
+            section {
                 clear: both;
                 min-height: 100px;
                 width: 100%;
@@ -196,8 +199,8 @@
         </style>
     </head>
     <body>
-        <div id="page">
-            <div id="section1" class="section">
+        <main>
+            <section id="section1">
                 <div id="section1a">
                     <div id="developer_name">BRANDON<br>SKRTICH</div>
                     <div id="developer_title">WEB DEVELOPER</div>
@@ -208,18 +211,18 @@
                     11530 Benton Ct<br>
                     Broomfield, Co 80020
                 </div>
-            </div>
-            <div id="section2" class="section">
+            </section>
+            <section id="section2">
                 <div class="section_title">Experience</div>
                 <div class="section_description">
                     <div class="job">
                         <div class="left">
-                            <div class="job_company">Distributor Wire & Cable</div>
-                            <div class="job_title">Senior Software Developer</div>
+                            <div class="job_company">Distributor Wire &amp; Cable</div>
+                            <div class="job_title">Senior Software Engineer</div>
                         </div>
                         <div class="right">
                             <div class="title">Nov, 2014 - Current</div>
-                            <div class="desc">Broomfield, CO</div>
+                            <div class="desc">Aurora, CO</div>
                         </div>
                         <div class="clear">
                             Transitioned from legacy order management system to a modern
@@ -282,8 +285,8 @@
                     </div>
                     -->
                 </div>
-            </div>
-            <div id="section3" class="section">
+            </section>
+            <section id="section3">
                 <div class="section_title">Skills</div>
                 <div class="section_description">
                     <span class="font2">Backbone.js</span>
@@ -311,8 +314,8 @@
                     <span class="font1">API</span>
                     <span class="font2">Linux</span>
                 </div>
-            </div>
-            <div id="section4" class="section">
+            </section>
+            <section id="section4">
                 <div class="section_title">Education</div>
                 <div class="section_description">
                     <div class="school">
@@ -326,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     </body>
 </html>
