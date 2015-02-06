@@ -17,8 +17,27 @@
             }
 
             div {
-                /*position: absolute;*/
                 box-sizing: border-box;
+            }
+
+            a:link {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            a:active {
+                color: inherit;
+                text-decoration: none;
             }
 
             main {
@@ -27,6 +46,9 @@
                 /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
 
                 font-weight: 400;
+
+                position: relative;
+                z-index: 1;
             }
 
             @media screen {
@@ -58,6 +80,13 @@
                     page-break-inside: avoid;
                 }
 
+                .tab {
+                    display: none;
+                }
+
+                .preload-font {
+                    display: none;
+                }
             }
 
             #section1 {
@@ -175,6 +204,30 @@
                 padding-right: 2px;
             }
 
+            .tab {
+                display: hidden;
+
+                left: 0;
+                top: 15px;
+
+                font-size: 30px;
+                position: absolute;
+                width: 40px;
+                height: 35px;
+                border: rgb(221, 221, 221);
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 5px;
+                background: rgb(249, 249, 249);
+                text-align: right;
+                padding: 2px;
+                color: rgb(115, 115, 115);
+            }
+
+            .tab:hover {
+                color: rgb(0, 0, 0);
+            }
+
             .font1 {
                 font-size: small;
                 font-weight: normal;
@@ -190,9 +243,21 @@
                 font-weight: 600;
             }
 
+            .preload-font {
+                position: fixed;
+                top: 0;
+                left: 0;
+                color: #DDD;
+                font-size: 5px;
+            }
+
         </style>
+
+        <script>"use strict";</script>
     </head>
     <body>
+        <!-- Load Font Awesome ASAP -->
+        <i class="preload-font" class="fa fa-square"></i>
         <main>
             <section id="section1">
                 <div id="section1a">
@@ -330,5 +395,37 @@
                 </div>
             </section>
         </main>
+
+
+        <div class="tab" style="top: 20px;">
+            <a href="javascript:window.print()"><i class="fa fa-print"></i></A>
+        </div>
+        <div class="tab" style="top: 55px;">
+            <a target="_blank" href="https://www.linkedin.com/in/bskrtich"><i class="fa fa-linkedin-square"></i></a>
+        </div>
+        <div class="tab" style="top: 90px;">
+            <a target="_blank" href="https://github.com/bskrtich"><i class="fa fa-github-square"></i></a>
+        </div>
+
+        <script>
+            $(function() {
+                // Set position of the tabs
+                function tab_position() {
+                    var main = $("main");
+                    var pos = main.position();
+                    var left = parseFloat(main.css('marginLeft'))+pos.left+main.outerWidth()-5;
+                    $(".tab").css({left: (left)});
+                }
+
+                // Run once on load
+                tab_position();
+
+                // Run every page resize
+                $(window).resize(tab_position);
+
+                // Show tabs once jquery is loaded
+                $(".tab").show();
+            });
+        </script>
     </body>
 </html>
