@@ -59,6 +59,10 @@
                     padding: 25px;
                     background-color: #FFF;
                 }
+
+                footer {
+                    display: none;
+                }
             }
 
             @media print {
@@ -87,10 +91,14 @@
                 .preload-font {
                     display: none;
                 }
+
+                footer {
+                    display: block;
+                }
             }
 
             #section1 {
-                height: 250px;
+                /*height: 250px;*/
             }
 
             #section1a {
@@ -251,6 +259,25 @@
                 font-size: 5px;
             }
 
+            footer div {
+                font-size: 13px;
+                width: 33%;
+                margin: 0;
+                float: left;
+            }
+
+            footer > div {
+                text-align: left;
+            }
+
+            footer > div + div {
+                text-align: center;
+            }
+
+            footer > div + div + div {
+                text-align: right;
+            }
+
         </style>
 
         <script>"use strict";</script>
@@ -265,12 +292,12 @@
                     <div id="developer_title">WEB DEVELOPER</div>
                 </div>
                 <div id="section1b">
-                    720.362.0848<br>
-                    <br>
-                    bskrtich@gmail.com<br>
-                    <br>
+                    720.362.0848
+                    <br><br>
+                    bskrtich<i class="fa fa-at" style="font-size: 22px;"></i>gmail.com
+                    <br><br>
                     11530 Benton Ct<br>
-                    Broomfield, Co 80020
+                    Broomfield, CO
                 </div>
             </section>
             <section id="section2">
@@ -394,6 +421,11 @@
                     </div>
                 </div>
             </section>
+            <footer>
+                <div>linkedin.com/in/bskrtich</div>
+                <div>brandon.skrtich.com</div>
+                <div>github.com/bskrtich</div>
+            </footer>
         </main>
 
 
@@ -408,6 +440,7 @@
         </div>
 
         <script>
+            // Run when jquery is loaded
             $(function() {
                 // Set position of the tabs
                 function tab_position() {
@@ -423,7 +456,7 @@
                 // Run every page resize
                 $(window).resize(tab_position);
 
-                // Show tabs once jquery is loaded
+                // Show tabs now that every thing is set
                 $(".tab").show();
             });
         </script>
