@@ -41,11 +41,8 @@
             }
 
             main {
-                font-family: 'Jura', sans-serif;
-                /*font-family: 'Khand', sans-serif;*/
-                /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
-
-                font-weight: 400;
+                font-family: 'Trebuchet MS', sans-serif;
+                font-size: 14px;
 
                 position: relative;
                 z-index: 1;
@@ -100,23 +97,27 @@
             section {
                 padding-bottom: 10px;
                 clear: both;
-                min-height: 100px;
                 width: 100%;
                 display: inline-block;
             }
 
+            .titlefont {
+                font-family: 'Jura', sans-serif;
+                font-weight: 400;
+            }
+
             #section1 {
                 /*height: 250px;*/
+                padding-left: 5px;
+                padding-right: 5px;
             }
 
             #section1a {
-                padding: 25px;
                 width: 50%;
                 float: left;
             }
 
             #section1b {
-                padding: 25px;
                 font-size: 30px;
                 width: 50%;
                 float: right;
@@ -165,12 +166,10 @@
                 text-align: justify;
                 width: calc(100% - 210px);
                 border-top: 2px solid black;
-                word-spacing: 2px;
             }
 
             .job {
                 width: 100%;
-                min-height: 100px;
                 display: inline-block;
             }
 
@@ -287,7 +286,7 @@
         <!-- Load Font Awesome ASAP -->
         <i class="fa fa-square preload-font"></i>
         <main>
-            <section id="section1">
+            <section id="section1" class="titlefont">
                 <div id="section1a">
                     <div id="developer_name">BRANDON<br>SKRTICH</div>
                     <div id="developer_title">WEB DEVELOPER</div>
@@ -302,7 +301,7 @@
                 </div>
             </section>
             <section id="section2">
-                <div class="section_title">Experience</div>
+                <div class="section_title titlefont">Experience</div>
                 <div class="section_description">
                     <div class="job">
                         <div class="left">
@@ -370,7 +369,7 @@
                 </div>
             </section>
             <section id="section3">
-                <div class="section_title">Skills</div>
+                <div class="section_title titlefont">Skills</div>
                 <div class="section_description">
                     <span class="font2">Backbone.js</span>
                     <span class="font3">PHP</span>
@@ -389,9 +388,9 @@
                     <span class="font1">Git</span>
                     <span class="font1">Scrum</span>
                     <span class="font3">MySQL</span>
+                    <span class="font2">AJAX</span>
                     <span class="font2">angular.js</span>
                     <span class="font1">LAMP Stack</span>
-                    <span class="font2">AJAX</span>
                     <span class="font2">REST</span>
                     <span class="font3">Oracle</span>
                     <span class="font1">API</span>
@@ -399,7 +398,7 @@
                 </div>
             </section>
             <section id="section4">
-                <div class="section_title">Education</div>
+                <div class="section_title titlefont">Education</div>
                 <div class="section_description">
                     <div class="school">
                         <div class="left">
