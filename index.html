@@ -4,11 +4,16 @@
         <meta charset="UTF-8">
         <title>Brandon Skrtich - Resumé</title>
 
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="http://fonts.googleapis.com/css?family=Jura:400,500,600" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/png" href="/bs-icon.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.js"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jura:400,500,600" rel="stylesheet" type="text/css">
+
+        <link rel="icon" type="image/png" href="bs-icon.png">
 
         <style>
             body {
@@ -152,7 +157,7 @@
             .section_title {
                 width: 210px;
                 float: left;
-                font-size: 35px;
+                font-size: 30px;
                 font-weight: bold;
                 padding: 5px;
                 text-align: center;
@@ -219,13 +224,16 @@
                 top: 15px;
 
                 font-size: 30px;
+                line-height: 30px;
                 position: absolute;
                 width: 40px;
                 height: 35px;
+
                 border: rgb(221, 221, 221);
                 border-style: solid;
                 border-width: 1px;
                 border-radius: 5px;
+
                 background: rgb(249, 249, 249);
                 text-align: right;
                 padding: 2px;
@@ -233,7 +241,11 @@
             }
 
             .tab:hover {
-                color: rgb(0, 0, 0);
+                color: rgb(0, 0, 0) !important;
+            }
+
+            .tab i {
+                padding-right: 2px;
             }
 
             .font1 {
@@ -278,6 +290,21 @@
                 text-align: right;
             }
 
+            .tooltipster-custom {
+                border-radius: 5px;
+                border: 2px solid #000;
+                background: #4c4c4c;
+                color: #fff;
+            }
+
+            .tooltipster-custom .tooltipster-content {
+                font-family: inherit;
+                font-size: 14px;
+                line-height: 16px;
+                padding: 4px;
+                overflow: hidden;
+            }
+
         </style>
 
         <script>"use strict";</script>
@@ -292,7 +319,7 @@
                     <div id="developer_title">WEB DEVELOPER</div>
                 </div>
                 <div id="section1b">
-                    720.362.0848
+                    <a href="tel:+17203620848">720.362.0848</a>
                     <br><br>
                     bskrtich<i class="fa fa-at" style="font-size: 22px;"></i>gmail.com
                     <br><br>
@@ -313,10 +340,11 @@
                             <div class="loc">Aurora, CO</div>
                         </div>
                         <div class="clear desc">
-                            Rebuilt and redesigned legacy order management system using modern Javascript
-                            libraries (Backbone.js/Bootstrap) and LAMP stack (Linux, Apache, MySQL, PHP).
-                            Also integrated in accounting software, analytic software and inventory tracking
-                            hardware to provide a full suite capable of managing the whole business.
+                            Rebuilt and redesigned legacy order management system from the ground up using
+                            modern Javascript libraries (Backbone.js/Bootstrap) and LAMP stack (Linux,
+                            Apache, MySQL, PHP). Also integrated in accounting software, analytic software
+                            and inventory tracking hardware to provide a full suite capable of managing the
+                            whole business.
                         </div>
                     </div>
                     <div class="job_padding"></div>
@@ -398,6 +426,22 @@
                 </div>
             </section>
             <section id="section4">
+                <div class="section_title titlefont">Certifications</div>
+                <div class="section_description">
+                    <div class="left">
+                        CIW Web Design Specialist<br>
+                        CIW Database Design Specialist<br>
+                        CIW JavaScript Specialist<br>
+                    </div>
+                    <div class="right">
+                        CIW Web Foundations Associate<br>
+                        CompTIA A+<br>
+                        CompTIA Security+<br>
+                    </div>
+                </div>
+            </section>
+            <!--
+            <section id="section5">
                 <div class="section_title titlefont">Education</div>
                 <div class="section_description">
                     <div class="school">
@@ -412,6 +456,7 @@
                     </div>
                 </div>
             </section>
+            -->
             <footer>
                 <div>linkedin.com/in/bskrtich</div>
                 <div>brandon.skrtich.com</div>
@@ -421,13 +466,13 @@
 
 
         <div class="tab" style="top: 20px;">
-            <a href="javascript:window.print()"><i class="fa fa-print"></i></A>
+            <a href="javascript:window.print()"><i id="print" title="Print" class="tooltip fa fa-print fa-fw"></i></A>
         </div>
         <div class="tab" style="top: 55px;">
-            <a target="_blank" href="https://www.linkedin.com/in/bskrtich"><i class="fa fa-linkedin-square"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/bskrtich"><i id="linkedin" title="Linkedin" class="tooltip fa fa-linkedin-square fa-fw"></i></a>
         </div>
         <div class="tab" style="top: 90px;">
-            <a target="_blank" href="https://github.com/bskrtich"><i class="fa fa-github-square"></i></a>
+            <a target="_blank" href="https://github.com/bskrtich"><i id="github" title="GitHub" class="tooltip fa fa-github-square fa-fw"></i></a>
         </div>
 
         <script>
@@ -449,6 +494,35 @@
 
                 // Show tabs now that every thing is set
                 $(".tab").show();
+
+                // Enable tool tips
+                $('.tooltip').tooltipster({'position': 'left', 'theme': 'tooltipster-custom'});
+
+                // Pulse color to draw the eye
+                var startcolor = 'rgb(115, 115, 115)';
+                var endcolor = 'rgb(160, 160, 160)';
+                var hovercolor = '#000';
+
+                pulse = function() {
+                    $('#print').animate({
+                        'color': startcolor,
+                    }, 750).animate({
+                        'color': endcolor,
+                    }, 750);
+                };
+                pulse();
+                pulseInterval = setInterval(pulse, 1500);
+
+                $('#print').on( "mouseenter", function() {
+                    clearInterval(pulseInterval);
+                    $('#print').stop(true);
+                    $('#print').css('color', hovercolor);
+                }).on( "mouseleave", function() {
+                    $('#print').css('color', startcolor);
+                    pulse();
+                    pulseInterval = setInterval(pulse, 1500);
+                });
+
             });
         </script>
     </body>
