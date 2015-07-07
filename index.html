@@ -97,6 +97,10 @@
                 footer {
                     display: block;
                 }
+
+                .tooltipster-custom {
+                    display: none;
+                }
             }
 
             section {
@@ -104,6 +108,7 @@
                 clear: both;
                 width: 100%;
                 display: inline-block;
+                box-sizing: border-box;
             }
 
             .titlefont {
@@ -127,6 +132,10 @@
                 width: 50%;
                 float: right;
                 text-align: right;
+            }
+
+            #section4 {
+                line-height: 150%;
             }
 
             #developer_name {
@@ -319,10 +328,12 @@
                     <div id="developer_title">WEB DEVELOPER</div>
                 </div>
                 <div id="section1b">
-                    <a href="tel:+17203620848">720.362.0848</a>
-                    <br><br>
-                    bskrtich<i class="fa fa-at" style="font-size: 22px;"></i>gmail.com
-                    <br><br>
+                    <a href="tel:+17203620848">
+                        720.362.0848
+                    </a>
+                    <br>
+                    <span style="line-height: 85px;">bskrtich<i class="fa fa-at" style="font-size: 22px;"></i>gmail.com</span>
+                    <br>
                     11530 Benton Ct<br>
                     Broomfield, CO
                 </div>
@@ -341,7 +352,7 @@
                         </div>
                         <div class="clear desc">
                             Rebuilt and redesigned legacy order management system from the ground up using
-                            modern Javascript libraries (Backbone.js/Bootstrap) and LAMP stack (Linux,
+                            modern JavaScript libraries (Backbone.js/Bootstrap) and LAMP stack (Linux,
                             Apache, MySQL, PHP). Also integrated in accounting software, analytic software
                             and inventory tracking hardware to provide a full suite capable of managing the
                             whole business.
@@ -358,7 +369,7 @@
                             <div class="loc">Broomfield, CO</div>
                         </div>
                         <div class="clear desc">
-                            Developed and maintained frontend systems used by fortune 500
+                            Developed and maintained front end systems used by fortune 500
                             companies using Backbone.js and Angular.js for the front end
                             and PHP, Oracle, and CentOS on the back.
                         </div>
@@ -391,7 +402,7 @@
                         </div>
                         <div class="clear">
                             Designed, programmed, and maintained a client/server applications along with a web portal for
-                            customer interaction and management using Javascript, PHP and PostgreSQL.
+                            customer interaction and management using JavaScript, PHP and PostgreSQL.
                         </div>
                     </div>
                 </div>
@@ -466,7 +477,7 @@
 
 
         <div class="tab" style="top: 20px;">
-            <a href="javascript:window.print()"><i id="print" title="Print" class="tooltip fa fa-print fa-fw"></i></A>
+            <a id="print" href=""><i title="Print" class="tooltip fa fa-print fa-fw"></i></A>
         </div>
         <div class="tab" style="top: 55px;">
             <a target="_blank" href="https://www.linkedin.com/in/bskrtich"><i id="linkedin" title="Linkedin" class="tooltip fa fa-linkedin-square fa-fw"></i></a>
@@ -497,6 +508,12 @@
 
                 // Enable tool tips
                 $('.tooltip').tooltipster({'position': 'left', 'theme': 'tooltipster-custom'});
+
+                // Click Print
+                $('#print').click(function(e) {
+                    e.preventDefault();
+                    window.print();
+                });
 
                 // Pulse color to draw the eye
                 var startcolor = 'rgb(115, 115, 115)';
