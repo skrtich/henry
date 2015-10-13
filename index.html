@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <title>Brandon Skrtich - Resumé</title>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.js"></script>
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.css" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Jura:400,500,600" rel="stylesheet" type="text/css">
 
         <link rel="icon" type="image/png" href="bs-icon.png">
@@ -477,13 +477,19 @@
 
 
         <div class="tab" style="top: 20px;">
-            <a id="print" href=""><i title="Print" class="tooltip fa fa-print fa-fw"></i></A>
+            <a id="print" href="">
+                <i title="Print" class="tooltip fa fa-print fa-fw"></i>
+            </a>
         </div>
         <div class="tab" style="top: 55px;">
-            <a target="_blank" href="https://www.linkedin.com/in/bskrtich"><i id="linkedin" title="Linkedin" class="tooltip fa fa-linkedin-square fa-fw"></i></a>
+            <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/bskrtich">
+                <i title="Linkedin" class="tooltip fa fa-linkedin-square fa-fw"></i>
+            </a>
         </div>
         <div class="tab" style="top: 90px;">
-            <a target="_blank" href="https://github.com/bskrtich"><i id="github" title="GitHub" class="tooltip fa fa-github-square fa-fw"></i></a>
+            <a id="github" target="_blank" href="https://github.com/bskrtich">
+                <i title="GitHub" class="tooltip fa fa-github-square fa-fw"></i>
+            </a>
         </div>
 
         <script>
@@ -513,6 +519,18 @@
                 $('#print').click(function(e) {
                     e.preventDefault();
                     window.print();
+
+                    ga('send', 'event', 'tabclick', 'print');
+                });
+
+                // Click linkedin
+                $('#linkedin').click(function(e) {
+                    ga('send', 'event', 'tabclick', 'linkedin');
+                });
+
+                // Click github
+                $('#github').click(function(e) {
+                    ga('send', 'event', 'tabclick', 'github');
                 });
 
                 // Pulse color to draw the eye
@@ -541,6 +559,16 @@
                 });
 
             });
+
+            // Some good old Google Analytics
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-68800210-1', 'auto');
+            ga('send', 'pageview');
+
         </script>
     </body>
 </html>
