@@ -1,2 +1,1 @@
-brandon
-=======
+Brandon Skrtich's Resumé
