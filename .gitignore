@@ -1,6 +1,4 @@
-# OS generated files #
-######################
-*.DS_Store
+# OS Generated Files
 .DS_Store
 .DS_Store?
 ._*
@@ -9,3 +7,16 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+Desktop.ini
+
+# Editor Files
+.idea
+.vscode
+.fuse_hidden*
+*.sublime*
+*.codekit
+*.bak
+*.iml
+*.swp
+*.kdev4
+.kdev4/
