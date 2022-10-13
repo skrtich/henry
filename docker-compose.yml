@@ -4,8 +4,8 @@ services:
   https:
     image: nginx
     ports:
-      - 80
+      - 1234:80
     environment:
-      - VIRTUAL_HOST=brandon.test
+      - VIRTUAL_HOST=henry.test
     volumes:
       - ./:/usr/share/nginx/html
